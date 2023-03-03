@@ -1,4 +1,4 @@
-package com.example.weather
+package com.example.weather.service
 
 import com.example.weatherapp.model.WeatherModel
 import io.reactivex.Single

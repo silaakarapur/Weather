@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+    <data>
+       <variable
+           name="dailyweather"
+           type="com.example.weatherapp.model.Main" />
+    </data>
+
+
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    >
+
+    <LinearLayout
+        android:id="@+id/hour"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/hour">
+
+        <TextView
+            android:id="@+id/am"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="51.72dp"
+            android:text="19 am"
+            android:gravity="center_horizontal|top"
+            android:textSize="50sp"
+            android:textColor="@color/white"
+            android:layout_gravity="center"
+            />
+        <View
+            android:id="@+id/small_moon_"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:layout_marginTop="60dp"
+            android:background="@drawable/cloud"
+            android:layout_gravity="center"
+            />
+
+        <TextView
+            android:id="@+id/some_id"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="center_horizontal|top"
+            android:text="%38"
+            android:textColor="@color/white"
+            android:textSize="30sp" />
+
+        <TextView
+            android:id="@+id/degree"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="180dp"
+            android:text="19 \u00B0"
+            android:gravity="center_horizontal|top"
+            android:layout_gravity="center"
+            android:textSize="80sp"
+            android:textColor="@color/white"
+            />
+
+
+    </LinearLayout>
+</LinearLayout>
+</layout>

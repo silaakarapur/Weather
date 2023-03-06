@@ -8,7 +8,7 @@ import retrofit2.adapter.rxjava2.RxJava2CallAdapterFactory
 
 
 class WeatherAPIService {
-    private val BASE_URL="https://api.openweathermap.org"
+    private val BASE_URL="https://api.openweathermap.org/"
     private val api= Retrofit.Builder()
         .baseUrl(BASE_URL)
         .addConverterFactory(GsonConverterFactory.create())
@@ -16,7 +16,7 @@ class WeatherAPIService {
         .build()
         .create(WeatherAPI::class.java)
 
-    fun getData(): Single<List<WeatherModel>> {
-        return api.getData()
+    fun getData(cityName:String): Single<WeatherModel> {
+        return api.getData(cityName)
     }
 }

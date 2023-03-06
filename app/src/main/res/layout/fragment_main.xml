@@ -4,14 +4,20 @@
         <variable
             name="dailyweather"
             type="com.example.weatherapp.model.Main" />
+        <variable
+            name="country"
+            type="com.example.weatherapp.model.Sys" />
     </data>
+
+
+
 
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    tools:context=".MainFragment">
+    tools:context="view.MainFragment">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
@@ -27,7 +33,7 @@
             android:layout_centerHorizontal="true"
             android:layout_marginTop="50dp"
             android:gravity="center_horizontal|top"
-            android:text="Montral"
+            android:text=""
             android:textColor="@color/white"
             android:textSize="20dp"
             app:layout_constraintEnd_toEndOf="parent"
@@ -62,53 +68,54 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent">
 
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="200dp"
-                android:orientation="horizontal">
+<!--            <LinearLayout-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="200dp"-->
+<!--                android:orientation="horizontal">-->
 
-                <ImageButton
-                    android:layout_width="80dp"
-                    android:layout_height="200dp"
-                    android:layout_marginRight="10dp"
-                    android:background="@drawable/hour">
+<!--                <ImageButton-->
+<!--                    android:layout_width="80dp"-->
+<!--                    android:layout_height="200dp"-->
+<!--                    android:layout_marginRight="10dp"-->
+<!--                    android:background="@drawable/hour">-->
 
-                </ImageButton>
+<!--                </ImageButton>-->
 
-                <ImageButton
-                    android:layout_width="80dp"
-                    android:layout_height="200dp"
-                    android:layout_marginRight="10dp"
-                    android:background="@drawable/hour" />
+<!--                <ImageButton-->
+<!--                    android:layout_width="80dp"-->
+<!--                    android:layout_height="200dp"-->
+<!--                    android:layout_marginRight="10dp"-->
+<!--                    android:background="@drawable/hour" />-->
 
-                <ImageButton
-                    android:layout_width="80dp"
-                    android:layout_height="200dp"
-                    android:layout_marginRight="10dp"
-                    android:background="@drawable/hour" />
+<!--                <ImageButton-->
+<!--                    android:layout_width="80dp"-->
+<!--                    android:layout_height="200dp"-->
+<!--                    android:layout_marginRight="10dp"-->
+<!--                    android:background="@drawable/hour" />-->
 
-                <ImageButton
-                    android:layout_width="80dp"
-                    android:layout_height="200dp"
-                    android:layout_marginRight="10dp"
-                    android:background="@drawable/hour" />
+<!--                <ImageButton-->
+<!--                    android:layout_width="80dp"-->
+<!--                    android:layout_height="200dp"-->
+<!--                    android:layout_marginRight="10dp"-->
+<!--                    android:background="@drawable/hour" />-->
 
-                <ImageButton
-                    android:layout_width="80dp"
-                    android:layout_height="200dp"
-                    android:layout_marginRight="10dp"
-                    android:background="@drawable/hour" />
-
-
-            </LinearLayout>
-
-            <!--            <androidx.recyclerview.widget.RecyclerView-->
-            <!--                android:layout_width="match_parent"-->
-            <!--                android:layout_height="100dp"-->
-            <!--                >-->
+<!--                <ImageButton-->
+<!--                    android:layout_width="80dp"-->
+<!--                    android:layout_height="200dp"-->
+<!--                    android:layout_marginRight="10dp"-->
+<!--                    android:background="@drawable/hour" />-->
 
 
-            <!--            </androidx.recyclerview.widget.RecyclerView>-->
+<!--            </LinearLayout>-->
+
+                        <androidx.recyclerview.widget.RecyclerView
+                            android:id="@+id/recycler"
+                            android:layout_width="match_parent"
+                            android:layout_height="100dp"
+                            >
+
+
+                        </androidx.recyclerview.widget.RecyclerView>
 
 
         </RelativeLayout>
@@ -132,7 +139,7 @@
             android:layout_width="143dp"
             android:layout_height="wrap_content"
             android:gravity="center_horizontal|top"
-            android:text="@{dailyweather.temp_max}"
+            android:text="@{dailyweather.temp_max }"
             android:textColor="#99EBF5"
             android:translationY="-0.08sp"
             app:layout_constraintEnd_toEndOf="parent"
